@@ -1,6 +1,6 @@
-package com.hunter.spittr.Service.impl;
+package com.hunter.spittr.service.impl;
 
-import com.hunter.spittr.Service.SpitterService;
+import com.hunter.spittr.service.SpitterService;
 import com.hunter.spittr.dao.SpitterDao;
 import com.hunter.spittr.meta.Spitter;
 import org.springframework.stereotype.Service;
@@ -19,12 +19,13 @@ public class SpitterServiceImpl implements SpitterService {
     public boolean isRegistered(Spitter spitter) {
         String username = spitter.getUsername();
         String password = spitter.getPassword();
+        String email = spitter.getEmail();
         //如果用户名已被注册，返回false
         this.spitter = spitterDao.getSpitter(username);
         if(this.spitter != null){
             return true;
         }
-        spitterDao.addSpitter(username, password);
+        spitterDao.addSpitter(username, password, email);
         return false;
     }
 

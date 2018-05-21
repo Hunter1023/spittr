@@ -2,8 +2,11 @@ com\hunter\spittr\meta\Spittle.class
 com\hunter\spittr\Service\impl\SpittleServiceImpl.class
 com\hunter\spittr\controller\SpitterController.class
 com\hunter\spittr\Service\SpittleService.class
+com\hunter\spittr\controller\exception\DuplicateSpittleException.class
 com\hunter\spittr\dao\SpittleDao.class
 com\hunter\spittr\dao\SpitterDao.class
+com\hunter\spittr\controller\exception\AppWideExceptionHandler.class
+com\hunter\spittr\controller\exception\SpittleNotFoundException.class
 com\hunter\spittr\controller\SpittleController.class
 com\hunter\spittr\controller\HomeController.class
 com\hunter\spittr\meta\Spitter.class

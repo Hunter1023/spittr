@@ -11,8 +11,9 @@
     <%@ include file="include/head.jsp"%>
     <body>
         <h1>个人中心</h1>
+        头像：
         用户名：<c:out value="${spitter.username}" />
-
+        邮箱： <c:out value="${spitter.email}" />
         <%@ include file="include/footer.jsp"%>
     </body>
 </html>

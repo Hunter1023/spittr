@@ -31,6 +31,9 @@
     </bean>
 -->
 
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
+
 
     <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
         <property name="viewResolvers">
@@ -51,5 +54,6 @@
 
     <!--实现静态资源的访问-->
     <mvc:resources location="/CSS/" mapping="/CSS/**"/>
+    <mvc:resources location="/images/" mapping="/image/**"/>
 
 </beans>

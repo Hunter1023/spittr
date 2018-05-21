@@ -1,4 +1,4 @@
-package com.hunter.spittr.Service;
+package com.hunter.spittr.service;
 
 import com.hunter.spittr.meta.Spitter;
 

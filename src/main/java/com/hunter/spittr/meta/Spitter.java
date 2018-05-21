@@ -3,22 +3,23 @@ package com.hunter.spittr.meta;
 import org.hibernate.validator.constraints.Email;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Spitter {
 
     private long id;
 
-    @NotNull
-    @Size(min = 5, max = 16, message = "{username.size}")
+    @Pattern(regexp = "^[a-zA-Z0-9_]{5,16}$", message = "{username.size}")
     private String username;
 
-    @NotNull
-    @Size(min = 5, max = 25, message = "{password.size}")
+    @Size(min = 8, max = 25, message = "{password.size}")
     private String password;
 
-    @NotNull
-    @Email(message = "{email.valid}")
+    /*Email的验证，前端的input type设为email时，就对其进行了格式的把控
+            干脆把email格式的验证完全交给前端；关于Email有效性的判断之后再实现*/
+    @Email(regexp = "^(\\w)+(\\.\\w+)*@(\\w)+((\\.\\w+)+)$",
+            message = "{email.valid}")
     private String email;
 
     public long getId() {
@@ -52,4 +53,5 @@ public class Spitter {
     public void setEmail(String email) {
         this.email = email;
     }
+
 }

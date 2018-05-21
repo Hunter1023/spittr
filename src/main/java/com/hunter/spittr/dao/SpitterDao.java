@@ -7,8 +7,10 @@ import org.apache.ibatis.annotations.Select;
 
 public interface SpitterDao {
     @Insert("INSERT INTO Spitter(username, password) " +
-            "VALUE (#{username}, #{password})")
-    int addSpitter(@Param("username") String username, @Param("password") String password);
+            "VALUE (#{username}, #{password}, #{email})")
+    int addSpitter(@Param("username") String username,
+                   @Param("password") String password,
+                   @Param("email") String email);
 
     @Select("SELECT * FROM Spitter WHERE username=#{username}")
     Spitter getSpitter(String username);

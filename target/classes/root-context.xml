@@ -17,6 +17,6 @@
     </bean>
 
     <mybatis:scan base-package="com.hunter.spittr.dao"/>
-    <context:component-scan base-package="com.hunter.spittr.Service"/>
+    <context:component-scan base-package="com.hunter.spittr.service"/>
 
 </beans>
