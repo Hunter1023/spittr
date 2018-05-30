@@ -5,11 +5,17 @@
     <body>
     <%@ include file="include/header.jsp" %>
         <h1>个人中心</h1>
-        头像：
-        用户名：<c:out value="${username}" />
-        <c:if test="${sessionScope.spitter.username == username}">
-            邮箱： <c:out value="${spitter.email}" />
-        </c:if>
+        <div>
+            头像：
+        </div>
+        <div>
+            用户名：<c:out value="${username}" />
+        </div>
+        <div>
+            <c:if test="${sessionScope.spitter.username == username}">
+                邮箱： <c:out value="${spitter.email}" />
+            </c:if>
+        </div>
 
         <%@ include file="include/footer.jsp"%>
     </body>

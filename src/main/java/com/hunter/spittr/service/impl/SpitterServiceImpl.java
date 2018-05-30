@@ -40,7 +40,9 @@ public class SpitterServiceImpl implements SpitterService {
     }
 
     @Override
-    public Spitter verifySpitter(String username, String password) {
+    public Spitter verifySpitter(Spitter spitter) {
+        String username = spitter.getUsername();
+        String password = spitter.getPassword();
         return spitterDao.verifySpitter(username, password);
     }
 }

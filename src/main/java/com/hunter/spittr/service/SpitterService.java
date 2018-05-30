@@ -9,5 +9,5 @@ public interface SpitterService {
 
     Spitter getByUserId(Long userId);
 
-    Spitter verifySpitter(String username, String password);
+    Spitter verifySpitter(Spitter spitter);
 }

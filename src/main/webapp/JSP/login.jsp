@@ -22,6 +22,12 @@
             <sf:errors path="password"/>
         </div>
     </div>
+    <div class="fmitem" align="right">
+
+            <c:if test="${!empty msg}">
+                ${msg}
+            </c:if>
+    </div>
 
     <div class="fmitem fmitem-nolab fmitem-btn">
         <div class="fmipt">
