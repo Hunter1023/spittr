@@ -22,6 +22,8 @@ public class Spitter {
             message = "{email.valid}")
     private String email;
 
+    private String headIcon;
+
     public long getId() {
         return id;
     }
@@ -54,4 +56,11 @@ public class Spitter {
         this.email = email;
     }
 
+    public String getHeadIcon() {
+        return headIcon;
+    }
+
+    public void setHeadIcon(String headIcon) {
+        this.headIcon = headIcon;
+    }
 }

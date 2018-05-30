@@ -69,6 +69,6 @@
     <mvc:default-servlet-handler />
     <!--实现静态资源的访问-->
     <!--<mvc:resources location="/CSS/" mapping="/CSS/**"/>-->
-    <!--<mvc:resources location="/images/" mapping="/image/**"/>-->
+    <!--<mvc:resources location="/images/errorpage/" mapping="/image/errorpage/**"/>-->
 
 </beans>

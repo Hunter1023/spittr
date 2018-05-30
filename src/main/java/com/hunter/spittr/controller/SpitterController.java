@@ -68,8 +68,18 @@ public class SpitterController {
              * 以 上传时间+文件原名 为名保存图片，
              * getTime 方法返回 代表从1970年1月1日开始（unix系统的时间戳起点）计算到Date对象中的时间之间的毫秒数。
              */
-            icon.transferTo(new File(dir.getAbsolutePath() + "/" +
-                    new Date().getTime() + icon.getOriginalFilename()));
+            String iconUrl = "images/headIcon/" +
+                    new Date().getTime() + icon.getOriginalFilename();
+
+            String iconAddress = contextPath + iconUrl;
+/*            String iconAddress = dir.getAbsolutePath() + "/" +
+                    new Date().getTime() + icon.getOriginalFilename();*/
+            icon.transferTo(new File(iconAddress));
+
+            //将图片的地址存入对应的spitter
+            spitter.setHeadIcon(iconUrl);
+
+            spitterService.register(spitter);
         }
 
 

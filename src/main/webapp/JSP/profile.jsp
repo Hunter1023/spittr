@@ -6,7 +6,7 @@
     <%@ include file="include/header.jsp" %>
         <h1>个人中心</h1>
         <div>
-            头像：
+            头像：<img src="${spitter.headIcon}" alt="头像" width="50px" >
         </div>
         <div>
             用户名：<c:out value="${username}" />

@@ -18,15 +18,17 @@ public class SpitterServiceImpl implements SpitterService {
     @Override
     public boolean isRegistered(Spitter spitter) {
         String username = spitter.getUsername();
-        String password = spitter.getPassword();
-        String email = spitter.getEmail();
         //如果用户名已被注册，返回false
         this.spitter = spitterDao.getByUsername(username);
         if(this.spitter != null){
             return true;
         }
-        spitterDao.addSpitter(username, password, email);
         return false;
+    }
+
+    @Override
+    public void register(Spitter spitter) {
+        spitterDao.addSpitter(spitter);
     }
 
     @Override
@@ -41,8 +43,6 @@ public class SpitterServiceImpl implements SpitterService {
 
     @Override
     public Spitter verifySpitter(Spitter spitter) {
-        String username = spitter.getUsername();
-        String password = spitter.getPassword();
-        return spitterDao.verifySpitter(username, password);
+        return spitterDao.verifySpitter(spitter);
     }
 }

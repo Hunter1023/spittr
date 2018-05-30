@@ -49,5 +49,15 @@
         <servlet-name>spittr</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+    
+    <error-page>
+        <error-code>404</error-code>
+        <location>/html/404page.html</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/html/404page.html</location>
+    </error-page>
 
 </web-app>
