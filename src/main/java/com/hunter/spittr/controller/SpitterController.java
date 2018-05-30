@@ -10,16 +10,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
 @Controller
-@RequestMapping("/spitter")
 public class SpitterController {
     @Resource
     private SpitterService spitterService;
@@ -40,7 +41,9 @@ public class SpitterController {
     public String register(HttpServletRequest request,
                            @RequestPart("icon") MultipartFile icon,
                            @Valid Spitter spitter,
-                           Errors errors) throws IOException {
+                           Errors errors,
+                           RedirectAttributes model,
+                           HttpSession session) throws IOException {
         //如果校验出现错误，则重新返回表单
         if (errors.hasErrors()) {
 
@@ -70,14 +73,28 @@ public class SpitterController {
         }
 
 
-        return "redirect:/spitter/" + spitter.getUsername();
+        model.addAttribute("username", spitter.getUsername());
+//        model.addFlashAttribute("spitter", spitter);
+        session.setAttribute("spitter", spitter);
+        /**
+         *
+         *  username作为占位符填充到url模板中，比起String形式直连更安全
+         *  模型中其他所有的 原始类型值 都可以添加到URL中作为查询参数，
+         *  如果没有相应的占位符，会自动以查询参数的形式附加到重定向URL上。
+         */
+        return "redirect:/{username}";//redirect的路径实际还会加上 ?spitterId=xxxx
     }
 
     @RequestMapping(value = "/{username}", method = RequestMethod.GET)
     public String showSpitterProfile(@PathVariable("username") String username,
                                      Model model) {
-        Spitter spitter = spitterService.getByUsername(username);
-        model.addAttribute("spitter", spitter);
+
+
+/*        if(!model.containsAttribute("spitter")){
+            Spitter spitter = spitterService.getByUsername(username);
+            model.addAttribute("spitter", spitter);
+        }*/
+
         return "profile";
     }
 }

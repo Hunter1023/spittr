@@ -9,7 +9,7 @@
 <!-- 表单没有设置action属性，会提交到当前路径下；
 modelAttribute用于绑定模型对象（对象在Controller中创建）;
  enctype="multipart/form-data" 以multipart数据的形式提交表单，而不是以表单数据的形式进行提交-->
-<sf:form class="m-form m-form-ht n-login" id="loginForm"
+<sf:form class="m-form m-form-ht n-login" id="register"
          method="post" modelAttribute="spitter" enctype="multipart/form-data">
     <div class="fmitem">
         <label class="fmlab">用户名：</label>

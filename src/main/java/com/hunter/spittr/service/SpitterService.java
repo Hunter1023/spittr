@@ -6,4 +6,8 @@ public interface SpitterService {
     boolean isRegistered(Spitter spitter);
 
     Spitter getByUsername(String username);
+
+    Spitter getByUserId(Long userId);
+
+    Spitter verifySpitter(String username, String password);
 }

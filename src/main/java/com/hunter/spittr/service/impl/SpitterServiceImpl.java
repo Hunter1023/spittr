@@ -21,7 +21,7 @@ public class SpitterServiceImpl implements SpitterService {
         String password = spitter.getPassword();
         String email = spitter.getEmail();
         //如果用户名已被注册，返回false
-        this.spitter = spitterDao.getSpitter(username);
+        this.spitter = spitterDao.getByUsername(username);
         if(this.spitter != null){
             return true;
         }
@@ -31,6 +31,16 @@ public class SpitterServiceImpl implements SpitterService {
 
     @Override
     public Spitter getByUsername(String username) {
-        return spitterDao.getSpitter(username);
+        return spitterDao.getByUsername(username);
+    }
+
+    @Override
+    public Spitter getByUserId(Long userId) {
+        return spitterDao.getByUserId(userId);
+    }
+
+    @Override
+    public Spitter verifySpitter(String username, String password) {
+        return spitterDao.verifySpitter(username, password);
     }
 }

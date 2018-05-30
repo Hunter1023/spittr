@@ -163,6 +163,8 @@ select.u-ipt{width:auto;padding:0;line-height:1;}
 .n-support{position:fixed;top:10px;left:50%;margin-left:-200px;width:400px;height:30px;line-height: 30px;text-align:center;background:#fd0;border-radius:2px;-webkit-transform:translate(0,-50px);}
 
 .n-login{width:300px;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background: #fff;padding:40px;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.2);}
+.n-register{width:300px;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background: #fff;padding:40px;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.2);}
+
 
 .n-head{padding:10px 15px;margin:0 0 30px;background:#d22147;line-height:30px;}
 .n-head,.n-head a,.n-head a:hover{color:#fff;}

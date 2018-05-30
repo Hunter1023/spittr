@@ -16,7 +16,9 @@ public interface SpittleDao {
 
 
     //获取指定分页的spittle列表
-    @Select("SELECT * FROM Spittle WHERE id < #{max} ORDER BY time DESC LIMIT #{count}")
+    @Select("SELECT le.id as id, message, time, userId, er.username as username " +
+            "FROM Spittle le LEFT JOIN Spitter er ON le.userId = er.id " +
+            "WHERE le.id < #{max} ORDER BY time DESC LIMIT #{count}")
 //    @Options(useGeneratedKeys = true)
     List<Spittle> getSpittleList(@Param("max") long max, @Param("count") int count);
 
@@ -25,6 +27,6 @@ public interface SpittleDao {
     Spittle getSpittle(String message);
 
 
-    @Insert("INSERT INTO Spittle(message, time) VALUES (#{message}, #{time})")
+    @Insert("INSERT INTO Spittle(message, time, userId) VALUES (#{message}, #{time}, #{userId})")
     int addSpittle(Spittle spittle);
 }

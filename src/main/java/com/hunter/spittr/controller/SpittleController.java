@@ -1,6 +1,5 @@
 package com.hunter.spittr.controller;
 
-import com.hunter.spittr.controller.exception.SpittleNotFoundException;
 import com.hunter.spittr.meta.Spitter;
 import com.hunter.spittr.service.SpittleService;
 import com.hunter.spittr.meta.Spittle;
@@ -10,13 +9,13 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
-import java.sql.Timestamp;
 import java.util.Date;
 
 @Controller
-@RequestMapping("/spittles")
+@RequestMapping("/")
 public class SpittleController {
     @Resource
     private SpittleService spittleService;
@@ -28,9 +27,9 @@ public class SpittleController {
     public String getSpittleList(@RequestParam(value = "max", defaultValue = MAX_LONG_AS_STRING) long max,
                                  @RequestParam(value = "count", defaultValue = "20") int count,
                                  Model model) {
-        model.addAttribute("spittle", new Spittle(null, null));
+        model.addAttribute("spittle", new Spittle(null, null, null));
         model.addAttribute("spittleList", spittleService.getSpittleList(max, count));
-        return "spittleList";
+        return "index";
     }
 
     //获取单条动态
@@ -53,13 +52,17 @@ public class SpittleController {
     @RequestMapping(method = RequestMethod.POST)
     public String publishSpittle(@Valid Spittle spittle,
                                  Errors errors,
-                                 Model model) {
+                                 Model model,
+                                 HttpSession session,
+                                 @RequestParam(value = "max", defaultValue = MAX_LONG_AS_STRING) long max,
+                                 @RequestParam(value = "count", defaultValue = "20") int count) {
         //如果校验出现错误，则重新返回表单
         if (errors.hasErrors()) {
-            return "/spittles";
+            return "index";
         }
-
-        spittleService.publishSpittle(new Spittle(spittle.getMessage(), new Date()));
-        return "redirect:/spittles";
+        Spitter spitter = (Spitter)session.getAttribute("spitter");
+        spittleService.publishSpittle(new Spittle(spittle.getMessage(), new Date(), spitter.getId()));
+        model.addAttribute("spittleList", spittleService.getSpittleList(max, count));
+        return "index";
     }
 }
