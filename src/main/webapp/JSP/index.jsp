@@ -1,4 +1,5 @@
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 
 <html>
@@ -33,19 +34,24 @@
         <ul class="f-cb" id="plist">
             <c:forEach items="${spittleList}" var="spittle">
                 <li id="spittle_<c:out value="spittle.id"/>">
+                    <%--还未实现spittle与spitter.headIcon的关联--%>
+                    <div style="margin-right:15px">
+                        <img src="${spittle.headIcon}">
+                    </div>
+                    <div>
+                        <span class="nickname">
+                            <c:out value="${spittle.nickname}"/>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="spittleTime">
+                            <fmt:formatDate value="${spittle.time}" pattern="yyyy-M-d HH:mm" />
+                        </span>
+                    </div>
                     <div class="spittleMessage">
                         <c:out value="${spittle.message}"/>
                     </div>
-                    <span>
-                        <span class="username">
-                            <c:out value="${spittle.username}"/>
-                        </span>
-                    </span>
-                    <span>
-                        <span class="spittleTime">
-                            <c:out value="${spittle.time}"/>
-                        </span>
-                    </span>
+
 
                 </li>
             </c:forEach>

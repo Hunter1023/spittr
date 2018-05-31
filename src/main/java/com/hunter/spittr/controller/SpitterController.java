@@ -2,6 +2,7 @@ package com.hunter.spittr.controller;
 
 import com.hunter.spittr.service.SpitterService;
 import com.hunter.spittr.meta.Spitter;
+import net.coobird.thumbnailator.Thumbnails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -68,20 +69,29 @@ public class SpitterController {
              * 以 上传时间+文件原名 为名保存图片，
              * getTime 方法返回 代表从1970年1月1日开始（unix系统的时间戳起点）计算到Date对象中的时间之间的毫秒数。
              */
-            String iconUrl = "images/headIcon/" +
-                    new Date().getTime() + icon.getOriginalFilename();
+            String fileName = icon.getOriginalFilename();
+            String suffix = fileName.substring(fileName.lastIndexOf('.'));
+            String iconUrl = "images/headIcon/" + new Date().getTime() + suffix;//+ icon.getOriginalFilename();
 
             String iconAddress = contextPath + iconUrl;
 /*            String iconAddress = dir.getAbsolutePath() + "/" +
                     new Date().getTime() + icon.getOriginalFilename();*/
             icon.transferTo(new File(iconAddress));
 
+            Thumbnails.of(iconAddress).size(50,50).toFile(iconAddress);
+
             //将图片的地址存入对应的spitter
             spitter.setHeadIcon(iconUrl);
 
-            spitterService.register(spitter);
+
+        }else{
+            //提供默认的初始用户头像
         }
 
+        spitterService.register(spitter);
+
+        //获取有完整内容的spitter对象（即含userId)
+        spitter = spitterService.verifySpitter(spitter);
 
         model.addAttribute("nickname", spitter.getNickname());
 //        model.addFlashAttribute("spitter", spitter);

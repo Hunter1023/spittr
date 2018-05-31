@@ -30,9 +30,7 @@ public class SpittleServiceImpl implements SpittleService {
     public void publishSpittle(Spittle spittle) {
 
         //如果已有的动态中，没有与打算发表的动态相同，则将spittle传入数据库
-        Spittle spittle1 = spittleDao.getSpittle(spittle.getMessage());
-
-        if(spittle1 == null){
+        if(spittleDao.getSpittle(spittle.getMessage()) == null){
             spittleDao.addSpittle(spittle);
         }
     }

@@ -10,13 +10,13 @@ import java.util.List;
 
 public interface SpittleDao {
 
-//    //获取最新的spittle列表分页(默认20条动态)
-//    @Select("SELECT * FROM Spittle ORDER BY time DESC LIMIT 20")
+//    //获取最新的spittle列表分页(默认10条动态)
+//    @Select("SELECT * FROM Spittle ORDER BY time DESC LIMIT 10")
 //    List<Spittle> getRecentList();
 
 
     //获取指定分页的spittle列表
-    @Select("SELECT le.id as id, message, time, userId, er.username as username " +
+    @Select("SELECT le.id as id, message, time, userId, nickname, headIcon " +
             "FROM Spittle le LEFT JOIN Spitter er ON le.userId = er.id " +
             "WHERE le.id < #{max} ORDER BY time DESC LIMIT #{count}")
 //    @Options(useGeneratedKeys = true)

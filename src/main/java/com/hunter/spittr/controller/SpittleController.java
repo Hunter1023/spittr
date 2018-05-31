@@ -25,9 +25,9 @@ public class SpittleController {
     //获取动态列表
     @RequestMapping(method = RequestMethod.GET)
     public String getSpittleList(@RequestParam(value = "max", defaultValue = MAX_LONG_AS_STRING) long max,
-                                 @RequestParam(value = "count", defaultValue = "20") int count,
+                                 @RequestParam(value = "count", defaultValue = "10") int count,
                                  Model model) {
-        model.addAttribute("spittle", new Spittle(null, null, null));
+        model.addAttribute("spittle", new Spittle(null, null, null, null, null));
         model.addAttribute("spittleList", spittleService.getSpittleList(max, count));
         return "index";
     }
@@ -61,7 +61,9 @@ public class SpittleController {
             return "index";
         }
         Spitter spitter = (Spitter)session.getAttribute("spitter");
-        spittleService.publishSpittle(new Spittle(spittle.getMessage(), new Date(), spitter.getId()));
+        spittleService.publishSpittle(
+                new Spittle(spittle.getMessage(), new Date(), spitter.getId(),
+                        spitter.getNickname(), spitter.getHeadIcon()));
         model.addAttribute("spittleList", spittleService.getSpittleList(max, count));
         return "index";
     }
