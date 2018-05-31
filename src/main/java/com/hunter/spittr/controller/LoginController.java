@@ -25,29 +25,24 @@ public class LoginController {
         //判断session中是否已有用户对象
         Spitter spitter = (Spitter)session.getAttribute("spitter");
         if (spitter != null){
-            model.addAttribute("username", spitter.getUsername());
-            return "redirect:/{username} ";
+            model.addAttribute("nickname", spitter.getNickname());
+            return "redirect:/{nickname} ";
         }
         model.addAttribute("spitter", new Spitter());
         return "login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(@Valid Spitter spitter,
-                        Errors errors,
+    public String login(Spitter spitter,
                         Model model,
                         HttpSession session) {
 
-        if (errors.hasErrors()) {
-            return "login";
-        }
-
         //验证用户名和密码是否正确
-        Spitter spitter1 = spitterService.verifySpitter(spitter);
-        if (spitter1 != null) {
-            model.addAttribute("username", spitter1.getUsername());
-            session.setAttribute("spitter", spitter1);
-            return "redirect:/{username} ";
+        spitter = spitterService.verifySpitter(spitter);
+        if (spitter != null) {
+            model.addAttribute("nickname", spitter.getNickname());
+            session.setAttribute("spitter", spitter);
+            return "redirect:/{nickname} ";
         }
 
         model.addAttribute("msg","用户名或密码错误！");

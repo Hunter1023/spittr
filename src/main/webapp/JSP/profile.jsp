@@ -9,10 +9,10 @@
             头像：<img src="${spitter.headIcon}" alt="头像" width="50px" >
         </div>
         <div>
-            用户名：<c:out value="${username}" />
+            昵称：<c:out value="${nickname}" />
         </div>
         <div>
-            <c:if test="${sessionScope.spitter.username == username}">
+            <c:if test="${sessionScope.spitter.nickname == nickname}">
                 邮箱： <c:out value="${spitter.email}" />
             </c:if>
         </div>

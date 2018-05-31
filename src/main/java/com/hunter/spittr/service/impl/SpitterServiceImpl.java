@@ -10,35 +10,28 @@ import javax.annotation.Resource;
 @Service
 public class SpitterServiceImpl implements SpitterService {
 
-    private Spitter spitter;
-
     @Resource
     private SpitterDao spitterDao;
 
     @Override
     public boolean isRegistered(Spitter spitter) {
-        String username = spitter.getUsername();
-        //如果用户名已被注册，返回false
-        this.spitter = spitterDao.getByUsername(username);
-        if(this.spitter != null){
+        //如果用户名或昵称已被注册，返回false
+        if(spitterDao.getByUsernameOrNickname(spitter) != null){
             return true;
         }
         return false;
     }
 
+    //将用户信息添加到数据库
     @Override
     public void register(Spitter spitter) {
         spitterDao.addSpitter(spitter);
     }
 
+    //获取用户信息，展示于用户个人主页
     @Override
-    public Spitter getByUsername(String username) {
-        return spitterDao.getByUsername(username);
-    }
-
-    @Override
-    public Spitter getByUserId(Long userId) {
-        return spitterDao.getByUserId(userId);
+    public Spitter getByNickname(String nickname) {
+        return spitterDao.getByNickname(nickname);
     }
 
     @Override

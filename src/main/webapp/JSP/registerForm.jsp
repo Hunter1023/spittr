@@ -27,6 +27,13 @@ modelAttribute用于绑定模型对象（对象在Controller中创建）;
         </div>
     </div>
     <div class="fmitem">
+        <label class="fmlab">昵称：</label>
+        <div class="fmipt">
+            <sf:password path="nickname"/><br/>
+            <sf:errors path="nickname"/>
+        </div>
+    </div>
+    <div class="fmitem">
         <label class="fmlab">邮箱：</label>
         <div class="fmipt">
             <sf:input path="email" type="email" /><br/>

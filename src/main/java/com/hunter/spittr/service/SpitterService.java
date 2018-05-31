@@ -7,9 +7,7 @@ public interface SpitterService {
 
     void register(Spitter spitter);
 
-    Spitter getByUsername(String username);
-
-    Spitter getByUserId(Long userId);
+    Spitter getByNickname(String nickname);
 
     Spitter verifySpitter(Spitter spitter);
 }

@@ -51,7 +51,7 @@ public class SpitterController {
         }
         //需要检验用户名是否已存在（需要改进为通过validator实现），若用户名未存在，将新用户的相关信息插入数据库
         boolean isRegistered = spitterService.isRegistered(spitter);
-        if (isRegistered == true) {
+        if (isRegistered) {
             return "registerForm";
         }
 
@@ -83,7 +83,7 @@ public class SpitterController {
         }
 
 
-        model.addAttribute("username", spitter.getUsername());
+        model.addAttribute("nickname", spitter.getNickname());
 //        model.addFlashAttribute("spitter", spitter);
         session.setAttribute("spitter", spitter);
         /**
@@ -92,18 +92,18 @@ public class SpitterController {
          *  模型中其他所有的 原始类型值 都可以添加到URL中作为查询参数，
          *  如果没有相应的占位符，会自动以查询参数的形式附加到重定向URL上。
          */
-        return "redirect:/{username}";//redirect的路径实际还会加上 ?spitterId=xxxx
+        return "redirect:/{nickname}";//redirect的路径实际还会加上 ?spitterId=xxxx
     }
 
-    @RequestMapping(value = "/{username}", method = RequestMethod.GET)
-    public String showSpitterProfile(@PathVariable("username") String username,
+    @RequestMapping(value = "/{nickname}", method = RequestMethod.GET)
+    public String showSpitterProfile(@PathVariable("nickname") String nickname,
                                      Model model) {
 
-
-/*        if(!model.containsAttribute("spitter")){
-            Spitter spitter = spitterService.getByUsername(username);
+        //展示具体用户主页的基本信息
+        if(!model.containsAttribute("spitter")){
+            Spitter spitter = spitterService.getByNickname(nickname);
             model.addAttribute("spitter", spitter);
-        }*/
+        }
 
         return "profile";
     }

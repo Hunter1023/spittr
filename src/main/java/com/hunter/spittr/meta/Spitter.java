@@ -24,6 +24,9 @@ public class Spitter {
 
     private String headIcon;
 
+    @Pattern(regexp = "^[\u4e00-\u9fa5a-zA-Z0-9_]{4,16}$", message = "{nickname.size")
+    private String nickname;
+
     public long getId() {
         return id;
     }
@@ -62,5 +65,13 @@ public class Spitter {
 
     public void setHeadIcon(String headIcon) {
         this.headIcon = headIcon;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 }
