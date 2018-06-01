@@ -9,7 +9,7 @@ public interface SpittleService {
 
     List<Spittle> getSpittleList(long max, int count);
 
-//    Spittle getSpittle(long id);
+    List<Spittle> getSpittlesByUserId(long max, long userId, int count);
 
     void publishSpittle(Spittle spittle);
 

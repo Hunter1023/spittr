@@ -26,6 +26,7 @@ modelAttribute用于绑定模型对象（对象在Controller中创建）;
             <sf:errors path="password"/>
         </div>
     </div>
+
     <div class="fmitem">
         <label class="fmlab">昵称：</label>
         <div class="fmipt">

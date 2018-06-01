@@ -21,17 +21,13 @@ public class SpittleServiceImpl implements SpittleService {
         return spittleDao.getSpittleList(max, count);
     }
 
-//    @Override
-//    public Spittle getSpittle(long id) {
-//        return spittleDao.getSpittle(id);
-//    }
+    @Override
+    public List<Spittle> getSpittlesByUserId(long max, long userId, int count) {
+        return spittleDao.getSpittlesByUserId(max, userId, count);
+    }
 
     @Override
     public void publishSpittle(Spittle spittle) {
-
-        //如果已有的动态中，没有与打算发表的动态相同，则将spittle传入数据库
-        if(spittleDao.getSpittle(spittle.getMessage()) == null){
             spittleDao.addSpittle(spittle);
-        }
     }
 }

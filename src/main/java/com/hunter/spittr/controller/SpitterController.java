@@ -6,10 +6,7 @@ import net.coobird.thumbnailator.Thumbnails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -19,6 +16,8 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 
 @Controller
@@ -34,6 +33,7 @@ public class SpitterController {
          在模型中必须要有一个key为"spitter"的对象，否则表单无法正常渲染
          因此往视图模型中添加一个key为"spitter"的Spitter对象
          */
+
         model.addAttribute("spitter", new Spitter());
         return "registerForm";
     }
@@ -44,7 +44,7 @@ public class SpitterController {
                            @Valid Spitter spitter,
                            Errors errors,
                            RedirectAttributes model,
-                           HttpSession session) throws IOException {
+                           HttpSession session) throws IOException, NoSuchAlgorithmException {
         //如果校验出现错误，则重新返回表单
         if (errors.hasErrors()) {
 
@@ -66,7 +66,7 @@ public class SpitterController {
             if (!iconDir.exists()) {
                 iconDir.mkdirs();
             }
-            if(!thumbnailDir.exists()){
+            if (!thumbnailDir.exists()) {
                 thumbnailDir.mkdirs();
             }
             /**
@@ -95,6 +95,12 @@ public class SpitterController {
             //提供默认的初始用户头像
         }
 
+        //通过MD5对密码进行加密,方法上声明会抛出算法名称不存在异常
+        MessageDigest md = MessageDigest.getInstance("MD5");
+        //传入的参数是字节类型或字节类型数组，字符串需要使用getBytes()方法生成字节数组
+        md.update(spitter.getPassword().getBytes("UTF-8"));
+
+
         spitterService.register(spitter);
 
         //获取有完整内容的spitter对象（即含userId)
@@ -111,19 +117,4 @@ public class SpitterController {
         return "redirect:/{nickname}";//redirect的路径实际还会加上 ?spitterId=xxxx
     }
 
-    @RequestMapping(value = "/{nickname}", method = RequestMethod.GET)
-    public String showSpitterProfile(@PathVariable("nickname") String nickname,
-                                     Model model) {
-
-        //展示具体用户主页的基本信息
-        if (!model.containsAttribute("spitter")) {
-            Spitter spitter = spitterService.getByNickname(nickname);
-            model.addAttribute("spitter", spitter);
-        }
-
-        //展示对应用户发过的动态
-
-
-        return "profile";
-    }
 }

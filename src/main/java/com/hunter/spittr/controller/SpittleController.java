@@ -1,6 +1,7 @@
 package com.hunter.spittr.controller;
 
 import com.hunter.spittr.meta.Spitter;
+import com.hunter.spittr.service.SpitterService;
 import com.hunter.spittr.service.SpittleService;
 import com.hunter.spittr.meta.Spittle;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,8 @@ import java.util.Date;
 public class SpittleController {
     @Resource
     private SpittleService spittleService;
+    @Resource
+    private SpitterService spitterService;
     //分页展示相关
     private final String MAX_LONG_AS_STRING = Long.MAX_VALUE + "";
 
@@ -66,5 +69,22 @@ public class SpittleController {
                         spitter.getNickname(), spitter.getThumbnail()));
         model.addAttribute("spittleList", spittleService.getSpittleList(max, count));
         return "index";
+    }
+
+    //展示用户详情页（包含用户个人资料 和 发布过的动态）
+    @RequestMapping(value = "/{nickname}", method = RequestMethod.GET)
+    public String showSpitterProfile(@PathVariable("nickname") String nickname,
+                                     @RequestParam(value = "max", defaultValue = MAX_LONG_AS_STRING) long max,
+                                     @RequestParam(value = "count", defaultValue = "20") int count,
+                                     Model model) {
+
+        //展示具体用户主页的基本信息
+        Spitter spitter = spitterService.getByNickname(nickname);
+        model.addAttribute("spitter", spitter);
+
+        //展示对应用户发过的动态
+        model.addAttribute("spittleList", spittleService.getSpittlesByUserId(max, spitter.getId(), count));
+
+        return "profile";
     }
 }

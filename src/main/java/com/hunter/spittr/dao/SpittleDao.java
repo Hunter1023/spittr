@@ -22,9 +22,14 @@ public interface SpittleDao {
 //    @Options(useGeneratedKeys = true)
     List<Spittle> getSpittleList(@Param("max") long max, @Param("count") int count);
 
-    //获取某个指定的spittle
-    @Select("SELECT * FROM Spittle WHERE message=#{message}")
-    Spittle getSpittle(String message);
+    //获取某用户发布过的spittle列表
+    @Select("SELECT le.id as id, message, time, userId, nickname, thumbnail " +
+            "FROM Spittle le LEFT JOIN Spitter er ON le.userId = er.id " +
+            "WHERE le.id < #{max} AND le.userId = #{userId} " +
+            "ORDER BY time DESC LIMIT #{count}")
+    List<Spittle> getSpittlesByUserId(@Param("max") long max,
+                                      @Param("userId") long userId,
+                                      @Param("count") int count);
 
 
     @Insert("INSERT INTO Spittle(message, time, userId) VALUES (#{message}, #{time}, #{userId})")

@@ -12,7 +12,6 @@
                 <li><a href="<c:url value="/${sessionScope.spitter.nickname}" />">${sessionScope.spitter.nickname}</a></li>
                 <li><a href="<c:url value="/logout"/>">退出</a></li>
             </c:if>
-
-    </ul>
+        </ul>
     </div>
 </div>
