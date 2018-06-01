@@ -63,7 +63,7 @@ public class SpittleController {
         Spitter spitter = (Spitter)session.getAttribute("spitter");
         spittleService.publishSpittle(
                 new Spittle(spittle.getMessage(), new Date(), spitter.getId(),
-                        spitter.getNickname(), spitter.getHeadIcon()));
+                        spitter.getNickname(), spitter.getThumbnail()));
         model.addAttribute("spittleList", spittleService.getSpittleList(max, count));
         return "index";
     }

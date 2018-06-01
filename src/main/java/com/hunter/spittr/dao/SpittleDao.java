@@ -16,7 +16,7 @@ public interface SpittleDao {
 
 
     //获取指定分页的spittle列表
-    @Select("SELECT le.id as id, message, time, userId, nickname, headIcon " +
+    @Select("SELECT le.id as id, message, time, userId, nickname, thumbnail " +
             "FROM Spittle le LEFT JOIN Spitter er ON le.userId = er.id " +
             "WHERE le.id < #{max} ORDER BY time DESC LIMIT #{count}")
 //    @Options(useGeneratedKeys = true)

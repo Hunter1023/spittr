@@ -9,7 +9,7 @@
                 <li><a href="<c:url value="/register"/>">注册</a></li>
             </c:if>
             <c:if test="${!empty sessionScope.spitter}">
-                <li><a href="<c:url value="/${sessionScope.spitter.nickname}" />">个人主页</a></li>
+                <li><a href="<c:url value="/${sessionScope.spitter.nickname}" />">${sessionScope.spitter.nickname}</a></li>
                 <li><a href="<c:url value="/logout"/>">退出</a></li>
             </c:if>
 

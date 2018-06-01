@@ -11,7 +11,8 @@
 
             <tr>
                 <td>头像：</td>
-                <td><img src="${spitter.headIcon}" alt="头像" width="50px"></td><br/>
+                <%--头像在后端已经做了大小的处理，因此不用设置宽高等属性--%>
+                <td><img src="${spitter.headIcon}" alt="头像"></td><br/>
             </tr>
 
             <tr>

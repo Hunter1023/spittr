@@ -61,9 +61,13 @@ public class SpitterController {
             //获取webapp部署的目录，函数的参数 是根目录下的子目录路径
             String contextPath = request.getSession().getServletContext().getRealPath("/");
             //创建图片目录
-            File dir = new File(contextPath + "images/headIcon");
-            if (!dir.exists()) {
-                dir.mkdirs();
+            File iconDir = new File(contextPath + "images/headIcon");
+            File thumbnailDir = new File(contextPath + "images/thumbnails/headIcon");
+            if (!iconDir.exists()) {
+                iconDir.mkdirs();
+            }
+            if(!thumbnailDir.exists()){
+                thumbnailDir.mkdirs();
             }
             /**
              * 以 上传时间+文件原名 为名保存图片，
@@ -71,20 +75,23 @@ public class SpitterController {
              */
             String fileName = icon.getOriginalFilename();
             String suffix = fileName.substring(fileName.lastIndexOf('.'));
-            String iconUrl = "images/headIcon/" + new Date().getTime() + suffix;//+ icon.getOriginalFilename();
+            fileName = new Date().getTime() + suffix;
 
+            String iconUrl = "images/headIcon/" + fileName;
+            String thumbnailUrl = "images/thumbnails/headIcon/" + fileName;
             String iconAddress = contextPath + iconUrl;
-/*            String iconAddress = dir.getAbsolutePath() + "/" +
-                    new Date().getTime() + icon.getOriginalFilename();*/
+            String thumbnailAddress = contextPath + thumbnailUrl;
+
             icon.transferTo(new File(iconAddress));
 
-            Thumbnails.of(iconAddress).size(50,50).toFile(iconAddress);
+            Thumbnails.of(iconAddress).size(180, 180).toFile(iconAddress);
+            Thumbnails.of(iconAddress).size(50, 50).toFile(new File(thumbnailAddress));
 
             //将图片的地址存入对应的spitter
             spitter.setHeadIcon(iconUrl);
+            spitter.setThumbnail(thumbnailUrl);
 
-
-        }else{
+        } else {
             //提供默认的初始用户头像
         }
 
@@ -94,7 +101,6 @@ public class SpitterController {
         spitter = spitterService.verifySpitter(spitter);
 
         model.addAttribute("nickname", spitter.getNickname());
-//        model.addFlashAttribute("spitter", spitter);
         session.setAttribute("spitter", spitter);
         /**
          *
@@ -110,10 +116,13 @@ public class SpitterController {
                                      Model model) {
 
         //展示具体用户主页的基本信息
-        if(!model.containsAttribute("spitter")){
+        if (!model.containsAttribute("spitter")) {
             Spitter spitter = spitterService.getByNickname(nickname);
             model.addAttribute("spitter", spitter);
         }
+
+        //展示对应用户发过的动态
+
 
         return "profile";
     }

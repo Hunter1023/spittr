@@ -22,7 +22,9 @@ public class Spitter {
             message = "{email.valid}")
     private String email;
 
+    //用户头像及头像缩略图
     private String headIcon;
+    private String thumbnail;
 
     @Pattern(regexp = "^[\u4e00-\u9fa5a-zA-Z0-9_]{2,12}$", message = "{nickname.size}")
     private String nickname;
@@ -73,5 +75,13 @@ public class Spitter {
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
+    }
+
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
     }
 }

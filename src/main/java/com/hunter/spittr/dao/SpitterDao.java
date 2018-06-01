@@ -7,8 +7,8 @@ import org.apache.ibatis.annotations.Select;
 
 public interface SpitterDao {
     //添加用户
-    @Insert("INSERT INTO Spitter(headIcon, username, password, email, nickname) " +
-            "VALUE (#{headIcon}, #{username}, #{password}, #{email}, #{nickname})")
+    @Insert("INSERT INTO Spitter(headIcon, thumbnail, username, password, email, nickname) " +
+            "VALUE (#{headIcon}, #{thumbnail}, #{username}, #{password}, #{email}, #{nickname})")
     void addSpitter(Spitter spitter);
 
     //验证用户名或昵称是否已被注册

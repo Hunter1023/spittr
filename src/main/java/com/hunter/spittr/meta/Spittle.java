@@ -15,20 +15,20 @@ public class Spittle {
 
     //非数据库内容
     private String nickname;
-    //用于展示动态对应的用户头像
-    private String headIcon;
+    //用于展示动态对应的用户头像缩略图
+    private String thumbnail;
 
     public Spittle() {
     }
 
     public Spittle(String message, Date time, Long userId,
-                   String nickname, String headIcon) {
+                   String nickname, String thumbnail) {
         this.id = null;
         this.message = message;
         this.time = time;
         this.userId = userId;
         this.nickname = nickname;
-        this.headIcon = headIcon;
+        this.thumbnail = thumbnail;
     }
 
     public Long getId() {
@@ -72,11 +72,11 @@ public class Spittle {
         this.userId = userId;
     }
 
-    public String getHeadIcon() {
-        return headIcon;
+    public String getThumbnail() {
+        return thumbnail;
     }
 
-    public void setHeadIcon(String headIcon) {
-        this.headIcon = headIcon;
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
     }
 }

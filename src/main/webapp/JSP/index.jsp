@@ -22,41 +22,32 @@
                 <div class="fmitem fmitem-nolab fmitem-btn">
                     <div class="fmipt">
                         <input type="submit"
-                               class="u-btn u-btn-primary u-btn-lg u-btn-block" value="发布"/>
+                           class="u-btn u-btn-primary u-btn-lg u-btn-block" value="发布"/>
                     </div>
                 </div>
             </sf:form>
         </div>
     </c:if>
 
-    <div class="n-plist">
-        <%--<h2>动态列表</h2>--%>
-        <ul class="f-cb" id="plist">
-            <c:forEach items="${spittleList}" var="spittle">
-                <li id="spittle_<c:out value="spittle.id"/>">
-                    <%--还未实现spittle与spitter.headIcon的关联--%>
-                    <div style="margin-right:15px">
-                        <img src="${spittle.headIcon}">
-                    </div>
-                    <div>
-                        <span class="nickname">
-                            <c:out value="${spittle.nickname}"/>
-                        </span>
-                    </div>
-                    <div>
-                        <span class="spittleTime">
-                            <fmt:formatDate value="${spittle.time}" pattern="yyyy-M-d HH:mm" />
-                        </span>
-                    </div>
-                    <div class="spittleMessage">
-                        <c:out value="${spittle.message}"/>
-                    </div>
+        <c:forEach items="${spittleList}" var="spittle">
+            <div>
+                <img src="${spittle.thumbnail}">
+            </div>
+            <div>
+                <span class="nickname">
+                    <c:out value="${spittle.nickname}"/>
+                </span>
+            </div>
+            <div>
+                <span class="spittleTime">
+                    <fmt:formatDate value="${spittle.time}" pattern="yyyy-M-d HH:mm" />
+                </span>
+            </div>
+            <div class="spittleMessage">
+                <c:out value="${spittle.message}"/>
+            </div><br/><br/>
 
-
-                </li>
-            </c:forEach>
-        </ul>
-    </div>
+        </c:forEach>
 
 </div>
 
