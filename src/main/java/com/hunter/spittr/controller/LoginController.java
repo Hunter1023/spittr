@@ -37,6 +37,8 @@ public class LoginController {
                         Model model,
                         HttpSession session) {
 
+        //给密码进行MD5加密
+        spitter = spitterService.encryptPassword(spitter);
         //验证用户名和密码是否正确
         spitter = spitterService.verifySpitter(spitter);
         if (spitter != null) {

@@ -4,6 +4,7 @@ import com.hunter.spittr.service.SpitterService;
 import com.hunter.spittr.dao.SpitterDao;
 import com.hunter.spittr.meta.Spitter;
 import org.springframework.stereotype.Service;
+import org.springframework.util.DigestUtils;
 
 import javax.annotation.Resource;
 
@@ -16,7 +17,7 @@ public class SpitterServiceImpl implements SpitterService {
     @Override
     public boolean isRegistered(Spitter spitter) {
         //如果用户名或昵称已被注册，返回false
-        if(spitterDao.getByUsernameOrNickname(spitter) != null){
+        if (spitterDao.getByUsernameOrNickname(spitter) != null) {
             return true;
         }
         return false;
@@ -37,5 +38,13 @@ public class SpitterServiceImpl implements SpitterService {
     @Override
     public Spitter verifySpitter(Spitter spitter) {
         return spitterDao.verifySpitter(spitter);
+    }
+
+    //通过Spring提供的DigestUtils方法，对密码进行MD5加密
+    public Spitter encryptPassword(Spitter spitter) {
+        spitter.setPassword(
+                DigestUtils.md5DigestAsHex(
+                        spitter.getPassword().getBytes()));
+        return spitter;
     }
 }

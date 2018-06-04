@@ -5,6 +5,7 @@ import com.hunter.spittr.meta.Spitter;
 import net.coobird.thumbnailator.Thumbnails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.DigestUtils;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -44,7 +45,7 @@ public class SpitterController {
                            @Valid Spitter spitter,
                            Errors errors,
                            RedirectAttributes model,
-                           HttpSession session) throws IOException, NoSuchAlgorithmException {
+                           HttpSession session) throws IOException {
         //如果校验出现错误，则重新返回表单
         if (errors.hasErrors()) {
 
@@ -95,12 +96,9 @@ public class SpitterController {
             //提供默认的初始用户头像
         }
 
-        //通过MD5对密码进行加密,方法上声明会抛出算法名称不存在异常
-        MessageDigest md = MessageDigest.getInstance("MD5");
-        //传入的参数是字节类型或字节类型数组，字符串需要使用getBytes()方法生成字节数组
-        md.update(spitter.getPassword().getBytes("UTF-8"));
-
-
+        //给密码进行MD5加密
+        spitter = spitterService.encryptPassword(spitter);
+        //注册用户
         spitterService.register(spitter);
 
         //获取有完整内容的spitter对象（即含userId)

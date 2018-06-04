@@ -10,4 +10,6 @@ public interface SpitterService {
     Spitter getByNickname(String nickname);
 
     Spitter verifySpitter(Spitter spitter);
+
+    public Spitter encryptPassword(Spitter spitter);
 }
