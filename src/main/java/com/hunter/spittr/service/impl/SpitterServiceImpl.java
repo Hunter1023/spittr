@@ -3,8 +3,8 @@ package com.hunter.spittr.service.impl;
 import com.hunter.spittr.service.SpitterService;
 import com.hunter.spittr.dao.SpitterDao;
 import com.hunter.spittr.meta.Spitter;
+import com.hunter.spittr.util.MD5Util;
 import org.springframework.stereotype.Service;
-import org.springframework.util.DigestUtils;
 
 import javax.annotation.Resource;
 
@@ -26,6 +26,7 @@ public class SpitterServiceImpl implements SpitterService {
     //将用户信息添加到数据库
     @Override
     public void register(Spitter spitter) {
+        spitter.setPassword(MD5Util.generate(spitter.getPassword()));
         spitterDao.addSpitter(spitter);
     }
 
@@ -35,16 +36,25 @@ public class SpitterServiceImpl implements SpitterService {
         return spitterDao.getByNickname(nickname);
     }
 
+    //根据用户名和密码，获取完整的用户信息
     @Override
-    public Spitter verifySpitter(Spitter spitter) {
-        return spitterDao.verifySpitter(spitter);
+    public Spitter getSpitter(Spitter spitter) {
+
+        return spitterDao.getSpitter(spitter);
     }
 
-    //通过Spring提供的DigestUtils方法，对密码进行MD5加密
-    public Spitter encryptPassword(Spitter spitter) {
-        spitter.setPassword(
-                DigestUtils.md5DigestAsHex(
-                        spitter.getPassword().getBytes()));
-        return spitter;
+    //将密码加盐计算MD5，验证密码正确性
+    @Override
+    public Spitter verifySpitter(Spitter spitter) {
+        String password = spitterDao.getPassword(spitter.getUsername());
+
+        //如果用户存在 且 密码正确，返回 包含完整信息的用户对象
+        if(password != null && MD5Util.verify(spitter.getPassword(), password)){
+            spitter.setPassword(password);
+            return getSpitter(spitter);
+        }
+
+        return null;
     }
+
 }

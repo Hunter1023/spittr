@@ -96,13 +96,11 @@ public class SpitterController {
             //提供默认的初始用户头像
         }
 
-        //给密码进行MD5加密
-        spitter = spitterService.encryptPassword(spitter);
         //注册用户
         spitterService.register(spitter);
 
         //获取有完整内容的spitter对象（即含userId)
-        spitter = spitterService.verifySpitter(spitter);
+        spitter = spitterService.getSpitter(spitter);
 
         model.addAttribute("nickname", spitter.getNickname());
         session.setAttribute("spitter", spitter);

@@ -4,6 +4,7 @@ import com.hunter.spittr.meta.Spitter;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Service;
 
 public interface SpitterDao {
     //添加用户
@@ -23,7 +24,10 @@ public interface SpitterDao {
     @Select("SELECT * FROM Spitter WHERE nickname=#{nickname}")
     Spitter getByNickname(String nickname);
 
-    //验证登录信息
+    //获取完整的用户信息（邮箱，id，头像等）
     @Select("SELECT * FROM Spitter WHERE username=#{username} AND password=#{password}")
-    Spitter verifySpitter(Spitter spitter);
+    Spitter getSpitter(Spitter spitter);
+
+    @Select("SELECT password From Spitter WHERE username=#{username}")
+    String getPassword(String username);
 }

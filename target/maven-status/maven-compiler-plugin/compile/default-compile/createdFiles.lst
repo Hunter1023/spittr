@@ -3,6 +3,7 @@ com\hunter\spittr\controller\SpitterController.class
 com\hunter\spittr\controller\exception\DuplicateSpittleException.class
 com\hunter\spittr\dao\SpittleDao.class
 com\hunter\spittr\service\SpittleService.class
+com\hunter\spittr\util\MD5Util.class
 com\hunter\spittr\dao\SpitterDao.class
 com\hunter\spittr\service\impl\SpittleServiceImpl.class
 com\hunter\spittr\controller\exception\AppWideExceptionHandler.class
