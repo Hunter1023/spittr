@@ -5,6 +5,7 @@ import com.hunter.spittr.dao.SpitterDao;
 import com.hunter.spittr.meta.Spitter;
 import com.hunter.spittr.util.MD5Util;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -14,7 +15,7 @@ public class SpitterServiceImpl implements SpitterService {
     @Resource
     private SpitterDao spitterDao;
 
-    @Override
+    @Transactional
     public boolean isRegistered(Spitter spitter) {
         //如果用户名或昵称已被注册，返回false
         if (spitterDao.getByUsernameOrNickname(spitter) != null) {
@@ -24,27 +25,27 @@ public class SpitterServiceImpl implements SpitterService {
     }
 
     //将用户信息添加到数据库
-    @Override
+    @Transactional
     public void register(Spitter spitter) {
         spitter.setPassword(MD5Util.generate(spitter.getPassword()));
         spitterDao.addSpitter(spitter);
     }
 
     //获取用户信息，展示于用户个人主页
-    @Override
+    @Transactional
     public Spitter getByNickname(String nickname) {
         return spitterDao.getByNickname(nickname);
     }
 
     //根据用户名和密码，获取完整的用户信息
-    @Override
+    @Transactional
     public Spitter getSpitter(Spitter spitter) {
 
         return spitterDao.getSpitter(spitter);
     }
 
     //将密码加盐计算MD5，验证密码正确性
-    @Override
+    @Transactional
     public Spitter verifySpitter(Spitter spitter) {
         String password = spitterDao.getPassword(spitter.getUsername());
 

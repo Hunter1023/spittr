@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:09:15 +0800] "GET /spittr HTTP/1.1" 302 - http-bio-8080-exec-6 0
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:09:18 +0800] "GET /spittr/ HTTP/1.1" 500 184 http-bio-8080-exec-7 3400
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:09:18 +0800] "GET /spittr/images/errorPage/404page.jpg HTTP/1.1" 304 - http-bio-8080-exec-5 12
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:09:19 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-8 0
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:11:09 +0800] "GET /spittr/ HTTP/1.1" 500 184 http-bio-8080-exec-10 2028
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:12:27 +0800] "GET /spittr/ HTTP/1.1" 200 5593 http-bio-8080-exec-3 2070
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:12:27 +0800] "GET /spittr/images/thumbnails/headIcon/1528125106804.jpg HTTP/1.1" 304 - http-bio-8080-exec-10 9
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:12:27 +0800] "GET /spittr/CSS/style.css HTTP/1.1" 304 - http-bio-8080-exec-1 11
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:12:27 +0800] "GET /spittr/images/thumbnails/headIcon/1528105000226.jpg HTTP/1.1" 304 - http-bio-8080-exec-1 5
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:12:27 +0800] "GET /spittr/images/thumbnails/headIcon/1527838235148.png HTTP/1.1" 304 - http-bio-8080-exec-1 5
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:12:27 +0800] "GET /spittr/images/thumbnails/headIcon/1527871238467.jpeg HTTP/1.1" 304 - http-bio-8080-exec-1 6
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:12:27 +0800] "GET /spittr/images/thumbnails/headIcon/1527871166571.jpg HTTP/1.1" 304 - http-bio-8080-exec-1 4
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:13:43 +0800] "GET /spittr/login HTTP/1.1" 200 1545 http-bio-8080-exec-6 436
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:18:27 +0800] "GET /spittr HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:18:30 +0800] "GET /spittr/ HTTP/1.1" 500 184 http-bio-8080-exec-7 2857
+0:0:0:0:0:0:0:1 - - [05/Jun/2018:22:19:58 +0800] "GET /spittr/ HTTP/1.1" 500 184 http-bio-8080-exec-8 2027

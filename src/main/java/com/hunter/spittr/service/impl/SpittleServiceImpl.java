@@ -4,9 +4,9 @@ import com.hunter.spittr.service.SpittleService;
 import com.hunter.spittr.dao.SpittleDao;
 import com.hunter.spittr.meta.Spittle;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -15,18 +15,18 @@ public class SpittleServiceImpl implements SpittleService {
     private SpittleDao spittleDao;
 
 
-    @Override
+    @Transactional
     public List<Spittle> getSpittleList(long max, int count) {
 
         return spittleDao.getSpittleList(max, count);
     }
 
-    @Override
+    @Transactional
     public List<Spittle> getSpittlesByUserId(long max, long userId, int count) {
         return spittleDao.getSpittlesByUserId(max, userId, count);
     }
 
-    @Override
+    @Transactional
     public void publishSpittle(Spittle spittle) {
             spittleDao.addSpittle(spittle);
     }
