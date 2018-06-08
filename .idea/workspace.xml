@@ -7,122 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dd7b05e-515d-4015-8a21-0f661dc66057" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr.war" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/CSS/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/JSP/include/footer.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/JSP/include/head.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/JSP/include/header.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/JSP/index.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/JSP/login.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/JSP/profile.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/JSP/registerForm.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/JSP/spittle.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/ValidationMessages.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/LoginController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/SpitterController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/SpittleController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/exception/AppWideExceptionHandler.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/exception/DuplicateSpittleException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/exception/SpittleNotFoundException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/dao/SpitterDao.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/dao/SpittleDao.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/meta/Spitter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/meta/Spittle.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/service/SpitterService.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/service/SpittleService.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/service/impl/SpitterServiceImpl.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/service/impl/SpittleServiceImpl.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/util/MD5Util.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/db.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/root-context.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/spittr-servlet.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/classmate-1.3.1.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/commons-dbcp2-2.3.0.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/commons-logging-1.2.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/commons-pool2-2.5.0.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/hibernate-validator-5.3.6.Final.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/jackson-annotations-2.9.0.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/jackson-core-2.9.5.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/jackson-databind-2.9.5.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/jedis-2.9.0.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/jstl-1.2.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/mybatis-3.4.6.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/mybatis-spring-1.3.2.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/mysql-connector-java-6.0.6.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/slf4j-api-1.7.25.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-aop-5.0.6.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-beans-5.0.6.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-context-5.0.6.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-context-support-5.0.6.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-core-5.0.6.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-data-commons-2.0.7.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-data-keyvalue-2.0.7.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-data-redis-2.0.7.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-expression-5.0.6.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-jcl-5.0.6.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-jdbc-5.0.6.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-oxm-5.0.6.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-tx-5.0.6.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-web-5.0.6.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/spring-webmvc-5.0.6.RELEASE.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/thumbnailator-0.4.8.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/lib/validation-api-2.0.1.Final.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/web.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/html/404page.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/images/errorPage/404page.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/images/headIcon/1527838235148.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/images/headIcon/1527871166571.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/images/headIcon/1527871238467.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/images/headIcon/1528105000226.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/images/headIcon/1528125106804.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1527838235148.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1527871166571.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1527871238467.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1528105000226.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1528125106804.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_4.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-3.3.1.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/spittr_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/spittr_war_exploded.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Spitter.java" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Spitter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpitterServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpitterServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpittleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpittleServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/root-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/root-context.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/Service/impl/SpitterServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/Service/impl/SpitterServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/Service/impl/SpittleServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/Service/impl/SpittleServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/meta/Spitter.class" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/meta/Spitter.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/root-context.xml" afterPath="$PROJECT_DIR$/target/classes/root-context.xml" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/web.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-05-31" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-06-01" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-06-02" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-06-04" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/index_jsp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/index_jsp.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/login_jsp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/login_jsp.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/profile_jsp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/profile_jsp.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/registerForm_jsp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/registerForm_jsp.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_0149e5a4_9e0d_4a1f_91e1_4d5ec54e83a2_00000000.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_0149e5a4_9e0d_4a1f_91e1_4d5ec54e83a2_00000001.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_0149e5a4_9e0d_4a1f_91e1_4d5ec54e83a2_00000002.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_0149e5a4_9e0d_4a1f_91e1_4d5ec54e83a2_00000003.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_45310ed4_7caf_4c9f_813a_5c2f6441594b_00000000.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_45310ed4_7caf_4c9f_813a_5c2f6441594b_00000001.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_52f26fea_dbe6_490a_bd9c_21c81e66c8e0_00000000.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_52f26fea_dbe6_490a_bd9c_21c81e66c8e0_00000001.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_52f26fea_dbe6_490a_bd9c_21c81e66c8e0_00000002.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_52f26fea_dbe6_490a_bd9c_21c81e66c8e0_00000003.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_52f26fea_dbe6_490a_bd9c_21c81e66c8e0_00000004.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_c3a9e074_8bfb_41b3_b583_fbb5f2786f6c_00000010.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_c3a9e074_8bfb_41b3_b583_fbb5f2786f6c_00000011.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_c3a9e074_8bfb_41b3_b583_fbb5f2786f6c_00000012.tmp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/upload_c3a9e074_8bfb_41b3_b583_fbb5f2786f6c_00000013.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/spittr.iml" afterPath="$PROJECT_DIR$/spittr.iml" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/CSS/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-06-05" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-06-05" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -149,29 +43,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SpitterServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpitterServiceImpl.java">
+      <file leaf-file-name="SpitterController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpitterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="47" column="18" lean-forward="false" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1064">
-              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="681">
+              <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="root-context.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SpittleController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpittleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="51" column="7" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="root-context.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/root-context.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
@@ -181,21 +73,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.properties" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+            <state relative-caret-position="304">
+              <caret line="106" column="19" lean-forward="false" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpittleServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpittleServiceImpl.java">
+      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+            <state relative-caret-position="247">
+              <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -262,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/footer.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/Service/SpitterService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp" />
         <option value="/Properties Fragment (Spitter.java:455).properties" />
         <option value="$PROJECT_DIR$/src/main/resources/ValidationMessage.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/validation/ValidationMessages.properties" />
@@ -281,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/html/404page.html" />
         <option value="$PROJECT_DIR$/src/main/resources/spittr-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/JSP/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/CSS/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/ValidationMessages.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Spittle.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp" />
@@ -299,8 +209,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Spitter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpitterServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpittleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/root-context.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/CSS/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp" />
       </list>
     </option>
   </component>
@@ -392,7 +304,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -481,20 +392,43 @@
               <item name="spittr" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="spittr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spittr" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spittr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spittr" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spittr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spittr" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/emall_ssm" />
+    <property name="last_opened_file_path" value="E:/project/tmall_ssm" />
     <property name="settings.editor.selected.configurable" value="spring" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -502,18 +436,19 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.hunter.spittr.controller.exception" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Hunter\Desktop\spittr\src\main\webapp\CSS" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Hunter\Desktop\spittr\src\main\resources" />
       <recent name="C:\Users\Hunter\Desktop\spittr\src\main\resources\validation" />
       <recent name="C:\Users\Hunter\Desktop\spittr\src\main\java\com\hunter\spittr\meta" />
       <recent name="C:\Users\Hunter\Desktop\spittr\src\main\java" />
       <recent name="C:\Users\Hunter\Desktop\spittr\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hunter\Desktop\spittr\src\main\webapp\js" />
+      <recent name="C:\Users\Hunter\Desktop\spittr\src\main\webapp\CSS" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hunter.spittr.controller.exception" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -744,15 +679,18 @@
       <workItem from="1528092402810" duration="19987000" />
       <workItem from="1528191684477" duration="2983000" />
       <workItem from="1528207283776" duration="3678000" />
-      <workItem from="1528214129203" duration="144000" />
+      <workItem from="1528214129203" duration="2016000" />
+      <workItem from="1528270062960" duration="624000" />
+      <workItem from="1528471146932" duration="2613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300473000" />
+    <option name="totallyTimeSpent" value="305582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4667747" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
@@ -770,11 +708,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54294974" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75526744" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54294974" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3273906" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2753404" sideWeight="0.84602916" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3273906" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2753404" sideWeight="0.84602916" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2730711" sideWeight="0.15397082" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -848,31 +786,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.6.RELEASE/spring-webmvc-5.0.6.RELEASE.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.6.RELEASE/spring-webmvc-5.0.6.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="497" column="0" lean-forward="false" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.6.RELEASE/spring-webmvc-5.0.6.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/CSS/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -894,7 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
           <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -909,14 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -936,7 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
           <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -982,7 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -990,14 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1209">
           <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpittleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="85" column="104" lean-forward="false" selection-start-line="85" selection-start-column="104" selection-end-line="85" selection-end-column="104" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1027,14 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="871">
           <caret line="61" column="38" lean-forward="false" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpitterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1084,37 +974,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpitterServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="47" column="18" lean-forward="false" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpittleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spittr-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spittr.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1126,15 +997,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/root-context.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="58" lean-forward="false" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+        <state relative-caret-position="57">
+          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spittr.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpittleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpitterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="47" column="18" lean-forward="false" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpitterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpittleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="51" column="7" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="106" column="19" lean-forward="false" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1142,10 +1063,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery-3.3.1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/root-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="58" lean-forward="false" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
           <folding />
         </state>
       </provider>
