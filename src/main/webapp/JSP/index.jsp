@@ -6,58 +6,83 @@
 <%@ include file="include/head.jsp" %>
 <body>
 <%@ include file="include/header.jsp" %>
-<div id="content">
+
+<!-- Modal -->
+<div class="modal fade" id="addImgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">添加图片</h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <br>
     <c:if test="${!empty sessionScope.spitter}">
-        <div class="publish">
-                <%--当前未提供图片发布功能--%>
-            <sf:form class="m-form m-form-ht n-login" method="post" modelAttribute="spittle">
-                <div class="fmitem">
-                    <div class="fmipt">
-                        <!-- sf:input渲染成的html的type=text ,path属性值会渲染成value值 -->
-                        <sf:textarea path="message" cols="80" rows="5"/>
-                        <sf:errors path="message"/>
-                    </div>
+        <sf:form cssClass="form-horizontal" method="post" modelAttribute="spittle">
+            <div class="form-group">
+                <div class="col-md-offset-3 col-md-6">
+                    <!-- sf:input渲染成的html的type=text ,path属性值会渲染成value值 -->
+                    <sf:textarea path="message" cssClass="form-control" rows="5"/>
+                    <sf:errors path="message"/>
                 </div>
-                <div class="fmitem fmitem-nolab fmitem-btn">
-                    <div class="fmipt">
-                        <input type="submit" class="btn btn-info" value="发布"/>
-                    </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-3 col-md-5">
+                    <span id="addImg" class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                    图片
                 </div>
-            </sf:form>
-        </div>
+                <div class="col-md-1">
+                    <input type="submit" class="btn btn-info btn-block" value="发布"/>
+                </div>
+            </div>
+        </sf:form>
     </c:if>
+    <br>
 
-    <c:forEach items="${pageInfo.list}" var="spittle">
-        <div>
-            <img src="${spittle.thumbnail}">
-        </div>
-        <div>
-                <span class="nickname">
-                    <c:out value="${spittle.nickname}"/>
-                </span>
-        </div>
-        <div>
-                <span class="spittleTime">
-                    <fmt:formatDate value="${spittle.time}" pattern="yyyy-M-d HH:mm"/>
-                </span>
-        </div>
-        <div class="spittleMessage">
-            <c:out value="${spittle.message}"/>
-        </div>
-        <br/><br/>
+    <div class="col-md-offset-3">
+        <c:forEach items="${pageInfo.list}" var="spittle">
+            <div class="row">
+                <div class="col-md-1">
+                    <img src="${spittle.thumbnail}" class="img-responsive img-circle">
+                </div>
+                <div class="col-md-7">
+                    <div class="nickname">
+                        <c:out value="${spittle.nickname}"/>
+                    </div>
+                    <div class="time">
+                        <fmt:formatDate value="${spittle.time}" pattern="yyyy-M-d HH:mm"/>
+                    </div>
+                    <div class="spittleMessage">
+                        <c:out value="${spittle.message}"/>
+                    </div>
+                    <br/><br/>
+                </div>
+            </div>
+        </c:forEach>
+    </div>
 
-    </c:forEach>
 
     <%--分页信息--%>
     <div class="row">
         <%--分页条--%>
-        <div class="col-md-6">
+        <div class="text-center">
             <nav aria-label="Page navigation">
                 <ul class="pagination">
                     <li><a href="?pageNum=1">首页</a></li>
                     <c:if test="${pageInfo.hasPreviousPage}">
                         <li>
-                            <a href="?pageNum=${pageNum-1}" aria-label="Previous">
+                            <a href="?pageNum=${pageInfo.pageNum-1}" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
@@ -73,7 +98,7 @@
 
                     <c:if test="${pageInfo.hasNextPage}">
                         <li>
-                            <a href="?pageNum=${pageNum+1}" aria-label="Next">
+                            <a href="?pageNum=${pageInfo.pageNum+1}" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
@@ -85,6 +110,16 @@
     </div>
 
 </div>
+    <script>
+        $("#addImg").mouseover(function () {
+            $(this).css("cursor", "pointer");
+        });
+        $("#addImg").click(function () {
+            $("#addImgModal").modal({
+                backdrop:"static"
+            });
+        });
+    </script>
 
 <%@ include file="include/footer.jsp" %>
 </body>

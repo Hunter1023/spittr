@@ -45,7 +45,7 @@ modelAttribute用于绑定模型对象（对象在Controller中创建）;
     </div>
     <div class="form-group">
         <label class="col-md-1 col-md-offset-4 control-label">上传头像：</label>
-        <div>
+        <div class="col-md-1">
             <input type="file" name="icon" accept="image/jpeg,image/png,image/gif"/>
         </div>
     </div>
