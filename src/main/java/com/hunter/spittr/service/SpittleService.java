@@ -1,5 +1,6 @@
 package com.hunter.spittr.service;
 
+import com.github.pagehelper.PageInfo;
 import com.hunter.spittr.meta.Spittle;
 
 import java.util.Date;
@@ -7,9 +8,9 @@ import java.util.List;
 
 public interface SpittleService {
 
-    List<Spittle> getSpittleList(long max, int count);
+    PageInfo getSpittleList(int pageNum);
 
-    List<Spittle> getSpittlesByUserId(long max, long userId, int count);
+    PageInfo getSpittlesByUserId(int pageNum, long userId);
 
     void publishSpittle(Spittle spittle);
 
