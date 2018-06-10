@@ -10,8 +10,7 @@
     <c:if test="${!empty sessionScope.spitter}">
         <div class="publish">
                 <%--当前未提供图片发布功能--%>
-            <sf:form class="m-form m-form-ht n-login" id="loginForm"
-                     method="post" modelAttribute="spittle">
+            <sf:form class="m-form m-form-ht n-login" method="post" modelAttribute="spittle">
                 <div class="fmitem">
                     <div class="fmipt">
                         <!-- sf:input渲染成的html的type=text ,path属性值会渲染成value值 -->
@@ -21,15 +20,14 @@
                 </div>
                 <div class="fmitem fmitem-nolab fmitem-btn">
                     <div class="fmipt">
-                        <input type="submit"
-                               class="u-btn u-btn-primary u-btn-lg u-btn-block" value="发布"/>
+                        <input type="submit" class="btn btn-info" value="发布"/>
                     </div>
                 </div>
             </sf:form>
         </div>
     </c:if>
 
-    <c:forEach items="${spittleList}" var="spittle">
+    <c:forEach items="${pageInfo.list}" var="spittle">
         <div>
             <img src="${spittle.thumbnail}">
         </div>
@@ -49,6 +47,42 @@
         <br/><br/>
 
     </c:forEach>
+
+    <%--分页信息--%>
+    <div class="row">
+        <%--分页条--%>
+        <div class="col-md-6">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li><a href="?pageNum=1">首页</a></li>
+                    <c:if test="${pageInfo.hasPreviousPage}">
+                        <li>
+                            <a href="?pageNum=${pageNum-1}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    </c:if>
+                    <c:forEach items="${pageInfo.navigatepageNums}" var="pageNum">
+                        <c:if test="${pageNum == pageInfo.pageNum}">
+                            <li class="active"><a href="#">${pageNum}</a></li>
+                        </c:if>
+                        <c:if test="${pageNum != pageInfo.pageNum}">
+                            <li><a href="?pageNum=${pageNum}">${pageNum}</a></li>
+                        </c:if>
+                    </c:forEach>
+
+                    <c:if test="${pageInfo.hasNextPage}">
+                        <li>
+                            <a href="?pageNum=${pageNum+1}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </c:if>
+                    <li><a href="?pageNum=${pageInfo.pages}">尾页</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
 </div>
 

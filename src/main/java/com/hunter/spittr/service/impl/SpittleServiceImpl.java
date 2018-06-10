@@ -1,5 +1,7 @@
 package com.hunter.spittr.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.hunter.spittr.service.SpittleService;
 import com.hunter.spittr.dao.SpittleDao;
 import com.hunter.spittr.meta.Spittle;
@@ -14,16 +16,27 @@ public class SpittleServiceImpl implements SpittleService {
     @Resource
     private SpittleDao spittleDao;
 
-
     @Transactional
-    public List<Spittle> getSpittleList(long max, int count) {
+    public PageInfo<Spittle> getSpittleList(int pageNum) {
 
-        return spittleDao.getSpittleList(max, count);
+        //提供 页码和每页显示的数量参数
+        PageHelper.startPage(pageNum, 10);
+        //startPage方法之后紧跟的查询 才是 分页查询
+        List<Spittle> spittles = spittleDao.getSpittleList();
+        //使用pageInfo包装查询后的结果，只需将pageInfo交给页面即可
+        PageInfo<Spittle> pageInfo = new PageInfo<Spittle>(spittles);
+
+        return pageInfo;
     }
 
     @Transactional
-    public List<Spittle> getSpittlesByUserId(long max, long userId, int count) {
-        return spittleDao.getSpittlesByUserId(max, userId, count);
+    public PageInfo<Spittle> getSpittlesByUserId(int pageNum, long userId) {
+        PageHelper.startPage(pageNum, 10);
+
+        List<Spittle> spittles = spittleDao.getSpittlesByUserId(userId);
+        PageInfo<Spittle> pageInfo = new PageInfo<Spittle>(spittles);
+
+        return pageInfo;
     }
 
     @Transactional
