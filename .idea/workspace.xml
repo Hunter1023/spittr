@@ -6,23 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dd7b05e-515d-4015-8a21-0f661dc66057" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/include/footer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/include/footer.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/profile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/profile.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/registerForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/registerForm.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-06-10" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-06-10" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/index_jsp.class" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/index_jsp.class" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/index_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/index_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/login_jsp.class" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/login_jsp.class" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/login_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/login_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/profile_jsp.class" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/profile_jsp.class" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/profile_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/profile_jsp.java" />
-    </list>
+    <list default="true" id="4dd7b05e-515d-4015-8a21-0f661dc66057" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,7 +55,7 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
+            <state relative-caret-position="-188">
               <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
               <folding>
                 <element signature="e#640#647#1#HTML" expanded="true" />
@@ -756,16 +740,15 @@
       <workItem from="1528471146932" duration="5414000" />
       <workItem from="1528476660829" duration="920000" />
       <workItem from="1528531748316" duration="19207000" />
-      <workItem from="1528603846208" duration="15629000" />
+      <workItem from="1528603846208" duration="16257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344139000" />
+    <option name="totallyTimeSpent" value="344767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4667747" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
@@ -786,7 +769,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75526744" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3063209" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3273906" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3273906" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2344932" sideWeight="0.84602916" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2730711" sideWeight="0.15397082" order="5" side_tool="true" content_ui="tabs" />
@@ -1193,7 +1176,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
+        <state relative-caret-position="-188">
           <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
           <folding>
             <element signature="e#640#647#1#HTML" expanded="true" />
