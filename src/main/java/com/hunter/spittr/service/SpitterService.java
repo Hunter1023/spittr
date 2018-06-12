@@ -15,4 +15,5 @@ public interface SpitterService {
 
     void updateUserInfo(Spitter spitter);
 
+    String validateUsername(String username);
 }
