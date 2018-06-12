@@ -63,4 +63,14 @@ public class SpitterServiceImpl implements SpitterService {
     public void updateUserInfo(Spitter spitter) {
         spitterDao.updateUserInfo(spitter);
     }
+
+    @Override
+    public String validateUsername(String username) {
+        Spitter spitter = new Spitter();
+        spitter.setUsername(username);
+        if(spitterDao.getByUsernameOrNickname(spitter) != null) {
+            return "该用户名已被注册";
+        }
+        return "用户名可用";
+    }
 }

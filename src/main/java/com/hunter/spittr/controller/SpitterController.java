@@ -39,6 +39,16 @@ public class SpitterController {
         return "registerForm";
     }
 
+
+    @ResponseBody
+    @RequestMapping(value = "/validateUsername", method = RequestMethod.POST, produces = "application/html;charset=utf-8")
+    public String validateUsername(@RequestParam("username") String username){
+
+        return spitterService.validateUsername(username);
+    }
+
+
+
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String register(HttpServletRequest request,
                            @RequestPart("icon") MultipartFile icon,
