@@ -7,7 +7,5 @@
     <script src="js/jquery-3.3.1.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <script src="js/bootstrap.min.js"></script>
-
-    <%--还没用到--%>
     <link href="css/style.css" rel="stylesheet">
 </head>

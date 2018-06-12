@@ -18,3 +18,7 @@ body {
 .glyphicon-picture {
     font-size: 30px;
 }
+/*调整缩略图的下间距*/
+.thumbnail {
+    margin-bottom: 0px;
+}

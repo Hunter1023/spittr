@@ -13,4 +13,6 @@ public interface SpitterService {
 
     Spitter verifySpitter(Spitter spitter);
 
+    void updateUserInfo(Spitter spitter);
+
 }

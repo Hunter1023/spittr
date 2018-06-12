@@ -58,4 +58,9 @@ public class SpitterServiceImpl implements SpitterService {
         return null;
     }
 
+    //更新用户个人信息
+    @Transactional
+    public void updateUserInfo(Spitter spitter) {
+        spitterDao.updateUserInfo(spitter);
+    }
 }

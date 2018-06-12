@@ -113,4 +113,6 @@ public class SpitterController {
         return "redirect:/{nickname}";//redirect的路径实际还会加上 ?spitterId=xxxx
     }
 
+//    更新用户信息
+
 }

@@ -4,6 +4,7 @@ import com.hunter.spittr.meta.Spitter;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Service;
 
 public interface SpitterDao {
@@ -16,6 +17,12 @@ public interface SpitterDao {
     @Select("SELECT * FROM Spitter WHERE username=#{username} OR nickname=#{nickname}")
     Spitter getByUsernameOrNickname(Spitter spitter);
 
+
+    //修改用户信息(头像、昵称)
+    @Update("UPDATE spitter SET " +
+            "headIcon=#{headIcon}, thumbnail=#{thumbnail}, nickname=#{nickname} " +
+            "WHERE id=#{userId}")
+    void updateUserInfo(Spitter spitter);
 
     @Select("SELECT * FROM Spitter WHERE id=#{userId}")
     Spitter getByUserId(long userId);

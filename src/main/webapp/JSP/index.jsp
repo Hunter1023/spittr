@@ -19,8 +19,8 @@
                 ...
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">上传</button>
             </div>
         </div>
     </div>
@@ -50,66 +50,12 @@
     </c:if>
     <br>
 
-    <div class="col-md-offset-3">
-        <c:forEach items="${pageInfo.list}" var="spittle">
-            <div class="row">
-                <div class="col-md-1">
-                    <img src="${spittle.thumbnail}" class="img-responsive img-circle">
-                </div>
-                <div class="col-md-7">
-                    <div class="nickname">
-                        <c:out value="${spittle.nickname}"/>
-                    </div>
-                    <div class="time">
-                        <fmt:formatDate value="${spittle.time}" pattern="yyyy-M-d HH:mm"/>
-                    </div>
-                    <div class="spittleMessage">
-                        <c:out value="${spittle.message}"/>
-                    </div>
-                    <br/><br/>
-                </div>
-            </div>
-        </c:forEach>
-    </div>
+    <%@ include file="include/spittleList.jsp"%>
 
-
-    <%--分页信息--%>
-    <div class="row">
-        <%--分页条--%>
-        <div class="text-center">
-            <nav aria-label="Page navigation">
-                <ul class="pagination">
-                    <li><a href="?pageNum=1">首页</a></li>
-                    <c:if test="${pageInfo.hasPreviousPage}">
-                        <li>
-                            <a href="?pageNum=${pageInfo.pageNum-1}" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                    </c:if>
-                    <c:forEach items="${pageInfo.navigatepageNums}" var="pageNum">
-                        <c:if test="${pageNum == pageInfo.pageNum}">
-                            <li class="active"><a href="#">${pageNum}</a></li>
-                        </c:if>
-                        <c:if test="${pageNum != pageInfo.pageNum}">
-                            <li><a href="?pageNum=${pageNum}">${pageNum}</a></li>
-                        </c:if>
-                    </c:forEach>
-
-                    <c:if test="${pageInfo.hasNextPage}">
-                        <li>
-                            <a href="?pageNum=${pageInfo.pageNum+1}" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </c:if>
-                    <li><a href="?pageNum=${pageInfo.pages}">尾页</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <%@ include file="include/paging.jsp"%>
 
 </div>
+
     <script>
         $("#addImg").mouseover(function () {
             $(this).css("cursor", "pointer");
