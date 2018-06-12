@@ -7,32 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dd7b05e-515d-4015-8a21-0f661dc66057" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/include/paging.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/include/spittleList.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/include/userInfo.jsp" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpitterController.java" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpitterController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/SpitterDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/SpitterDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/SpitterService.java" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/SpitterService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpitterServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpitterServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/profile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/profile.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/Service/SpitterService.class" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/Service/SpitterService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/Service/impl/SpitterServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/Service/impl/SpitterServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/dao/SpitterDao.class" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/dao/SpitterDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-06-09" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-06-10" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/index_jsp.class" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/index_jsp.class" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/index_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/index_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/login_jsp.class" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/login_jsp.class" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/login_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/login_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/profile_jsp.class" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/profile_jsp.class" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/profile_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/profile_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/registerForm_jsp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/spittr/org/apache/jsp/JSP/registerForm_jsp.java" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -112,7 +87,7 @@
       <file leaf-file-name="spittleList.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/spittleList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="59">
               <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
               <folding />
             </state>
@@ -807,12 +782,12 @@
       <workItem from="1528531748316" duration="19207000" />
       <workItem from="1528603846208" duration="16257000" />
       <workItem from="1528699791038" duration="19670000" />
-      <workItem from="1528797307891" duration="32000" />
+      <workItem from="1528797307891" duration="200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364469000" />
+    <option name="totallyTimeSpent" value="364637000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -837,7 +812,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75526744" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.49092284" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32576984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24205749" sideWeight="0.84602916" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2730711" sideWeight="0.15397082" order="5" side_tool="true" content_ui="tabs" />
@@ -1161,7 +1136,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/spittleList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
+        <state relative-caret-position="59">
           <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
           <folding />
         </state>
