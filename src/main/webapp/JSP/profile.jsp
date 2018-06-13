@@ -23,7 +23,7 @@
                 <c:out value="${nickname}"/><br>
             </h2>
         </div>
-        <c:if test="${spitter.nickname} == ${nickname}">
+        <c:if test="${sessionScope.spitter.nickname} == ${nickname}">
             <div class="col-md-2"></div>
         </c:if>
     </div>
