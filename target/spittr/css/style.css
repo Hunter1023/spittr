@@ -1,0 +1,24 @@
+/*更改主页图标的颜色*/
+.glyphicon:before {
+    color: #1da1f2;
+}
+/*更改动态的间距*/
+.spittleMessage {
+    padding-top: 10px;
+}
+/*更改背景颜色*/
+body {
+    background-color: #efefef;
+}
+/*更改顶栏颜色*/
+.modal-header {
+    background-color: #ffffff;
+}
+/*更改图片图标的大小*/
+.glyphicon-picture {
+    font-size: 30px;
+}
+/*调整缩略图的下间距*/
+.thumbnail {
+    margin-bottom: 0px;
+}

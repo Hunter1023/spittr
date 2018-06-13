@@ -28,6 +28,9 @@ public class Spitter {
     @Pattern(regexp = "^[\u4e00-\u9fa5a-zA-Z0-9_]{2,12}$", message = "{nickname.size}")
     private String nickname;
 
+    //非数据库内容
+    private boolean autoLogin;
+
     public long getId() {
         return id;
     }
@@ -82,5 +85,13 @@ public class Spitter {
 
     public void setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
+    }
+
+    public boolean isAutoLogin() {
+        return autoLogin;
+    }
+
+    public void setAutoLogin(boolean autoLogin) {
+        this.autoLogin = autoLogin;
     }
 }

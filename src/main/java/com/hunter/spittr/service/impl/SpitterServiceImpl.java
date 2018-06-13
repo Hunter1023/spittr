@@ -47,6 +47,7 @@ public class SpitterServiceImpl implements SpitterService {
     //将密码加盐计算MD5，验证密码正确性
     @Transactional
     public Spitter verifySpitter(Spitter spitter) {
+
         String password = spitterDao.getPassword(spitter.getUsername());
 
         //如果用户存在 且 密码正确，返回 包含完整信息的用户对象
@@ -62,5 +63,15 @@ public class SpitterServiceImpl implements SpitterService {
     @Transactional
     public void updateUserInfo(Spitter spitter) {
         spitterDao.updateUserInfo(spitter);
+    }
+
+    @Override
+    public String validateUsername(String username) {
+        Spitter spitter = new Spitter();
+        spitter.setUsername(username);
+        if(spitterDao.getByUsernameOrNickname(spitter) != null) {
+            return "该用户名已被注册";
+        }
+        return "用户名可用";
     }
 }

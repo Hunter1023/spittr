@@ -20,12 +20,15 @@
                         首页
                     </a>
                 </li>
-                <c:if test="${empty sessionScope.spitter}">
+                <%
+
+                %>
+                <c:if test="${empty cookie.get(userId)}">
                     <li><a href="<c:url value="/login" />">登录</a>
                     </li>
                     <li><a href="<c:url value="/register"/>">注册</a></li>
                 </c:if>
-                <c:if test="${!empty sessionScope.spitter}">
+                <c:if test="${!empty cookie.get(userId)}">
                     <li>
                         <a href="<c:url value="/${sessionScope.spitter.nickname}" />">
                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>

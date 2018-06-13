@@ -6,8 +6,7 @@
 <%@ include file="include/header.jsp" %>
 
 <br>
-<sf:form cssClass="form-horizontal" id="login" method="post"
-         modelAttribute="spitter" enctype="multipart/form-data">
+<sf:form cssClass="form-horizontal" id="login" modelAttribute="spitter" method="post">
     <div class="form-group">
         <div class="col-md-2 col-md-offset-5">
             <!-- sf:input渲染成的html的type=text ,path属性值会渲染成value值 -->
@@ -17,7 +16,7 @@
     </div>
     <div class="form-group">
         <div class="col-md-2 col-md-offset-5">
-            <sf:password cssClass="form-control" path="password" placeholder="输入密码"/>
+            <sf:password cssClass="form-control" path="password" placeholder="输入密码" autocomplete="on"/>
             <sf:errors path="password"/>
         </div>
     </div>
@@ -26,6 +25,11 @@
             <c:if test="${!empty msg}">
                 ${msg}
             </c:if>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-2 col-md-offset-5">
+            <sf:checkbox path="autoLogin"/>自动登录
         </div>
     </div>
     <div class="form-group ">

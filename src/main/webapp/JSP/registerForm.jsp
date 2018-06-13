@@ -1,5 +1,5 @@
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <%@ page session="false" %>
 <html>
 <%@ include file="include/head.jsp" %>
@@ -20,6 +20,7 @@ modelAttribute用于绑定模型对象（对象在Controller中创建）;
             <sf:input cssClass="form-control" path="username"/>
             <sf:errors path="username"/>
         </div>
+        <div class="col-md-2" id="usernameError"></div>
     </div>
     <div class="form-group">
         <label class="col-md-1 col-md-offset-4 control-label">密码：</label>
@@ -58,4 +59,24 @@ modelAttribute用于绑定模型对象（对象在Controller中创建）;
 
 <%@ include file="include/footer.jsp" %>
 </body>
+
+<script type="text/javascript">
+    $(function () {
+        //键盘松开时触发监听事件，有实时反馈的体验（change体验不好，DOM失去焦点时才触发）
+        $(":input[name='username']").keyup(function () {
+            var val = $(this).val();
+            val = $.trim(val);
+
+            if(val != ""){
+                var url = "${pageContext.request.contextPath}/validateUsername";
+                var args = {"username": val, "time": new Date()};
+
+                $.post(url, args, function (data) {
+                    $("#usernameError").html(data);
+                });
+            }
+        });
+    })
+</script>
+
 </html>

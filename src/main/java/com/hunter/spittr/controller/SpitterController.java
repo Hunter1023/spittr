@@ -12,7 +12,9 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.File;
@@ -39,13 +41,22 @@ public class SpitterController {
         return "registerForm";
     }
 
+
+    @ResponseBody
+    @RequestMapping(value = "/validateUsername", method = RequestMethod.POST, produces = "application/html;charset=utf-8")
+    public String validateUsername(@RequestParam("username") String username){
+
+        return spitterService.validateUsername(username);
+    }
+
+
+
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String register(HttpServletRequest request,
                            @RequestPart("icon") MultipartFile icon,
                            @Valid Spitter spitter,
                            Errors errors,
-                           RedirectAttributes model,
-                           HttpSession session) throws IOException {
+                           HttpServletResponse response) throws IOException {
         //如果校验出现错误，则重新返回表单
         if (errors.hasErrors()) {
 
@@ -102,7 +113,10 @@ public class SpitterController {
         //获取有完整内容的spitter对象（即含userId)
         spitter = spitterService.getSpitter(spitter);
 
-        model.addAttribute("nickname", spitter.getNickname());
+        Cookie userId = new Cookie("userId", String.valueOf(spitter.getId()));
+        response.addCookie(userId);
+
+        HttpSession session = request.getSession();
         session.setAttribute("spitter", spitter);
         /**
          *
